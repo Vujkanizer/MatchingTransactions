@@ -1,0 +1,17 @@
+service: ordermatch
+
+provider:
+  name: aws
+  stage: test
+  runtime: go1.x
+  region: eu-central-1
+  memorySize: 128
+  profile: serverlessUser
+
+functions:
+  function1:
+    handler: index.handler
+
+	
+plugins:
+  - serverless-offline
